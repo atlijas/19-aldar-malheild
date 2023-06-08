@@ -22,25 +22,42 @@ from .lexicon_lookup import (exists_in_bin,
 
 ICEBERT_MODEL_PATH = 'transformer_models/IceBERT'
 
-unmasker = pipeline(
-    task='fill-mask',
-    model=ICEBERT_MODEL_PATH,
-    tokenizer=ICEBERT_MODEL_PATH,
-    device=0
-)
+try:
+    unmasker = pipeline(
+        task='fill-mask',
+        model=ICEBERT_MODEL_PATH,
+        tokenizer=ICEBERT_MODEL_PATH,
+        device=0
+    )
+
+except RuntimeError:
+    unmasker = pipeline(
+        task='fill-mask',
+        model=ICEBERT_MODEL_PATH,
+        tokenizer=ICEBERT_MODEL_PATH,
+    )
 
 MASK_TOK = unmasker.tokenizer.mask_token
 
 
 YFIRLESTUR_MODEL = 'transformer_models/yfirlestur-icelandic-correction-byt5'
-correct_ocr = pipeline(
-            'text2text-generation',
-            model=YFIRLESTUR_MODEL,
-            tokenizer=YFIRLESTUR_MODEL,
-            num_return_sequences=1,
-            device=0
-        )
+try:
+    correct_ocr = pipeline(
+                'text2text-generation',
+                model=YFIRLESTUR_MODEL,
+                tokenizer=YFIRLESTUR_MODEL,
+                num_return_sequences=1,
+                device=0
+            )
 
+
+except RuntimeError:
+    correct_ocr = pipeline(
+                'text2text-generation',
+                model=YFIRLESTUR_MODEL,
+                tokenizer=YFIRLESTUR_MODEL,
+                num_return_sequences=1,
+            )
 
 # Returns all the combinations of possible edits, e.g.
 # brezk-egypzku → [((3, 4), (10, 11)), ((3, 4),), ((10, 11),)]
