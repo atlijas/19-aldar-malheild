@@ -45,9 +45,7 @@ if args.modernize_only:
 
 transformed_lines = list(correct_ocr_line_by_line(OCR_POST_PROCESSING_MODEL, read_lines))
 merged_transformed = list(merge_and_format(list(transformed_lines)))
-print(merged_transformed)
 merged_modernized = [modernize_sentence(line) for line in merged_transformed]
-print(merged_modernized)
-# for i in merged_modernized:
-#     if len(i) > 0:
-#         print(i)
+for i in merged_modernized:
+    if len(i) > 0:
+        print(i)
