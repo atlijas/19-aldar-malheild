@@ -7,6 +7,7 @@ from tokenizer import correct_spaces
 import re
 from .months import MONTHS
 from wtpsplit import WtP
+from torch import cuda
 
 if TYPE_CHECKING:
     from fairseq.models.transformer import TransformerModel
@@ -19,7 +20,8 @@ LINE_END_REGEX_PATTERN = re.compile('[^\dA-ZÁÉÍÓÚÝÞÆÖ]\.')
 MONTHS_DATE_REGEX = re.compile('(?:\d{1,3}\.\s)(?:' + '|'.join(MONTHS) + ')\.{0,1}')
 
 wtp = WtP('wtp-bert-mini')
-wtp.to('cuda')
+if cuda.is_available():
+    wtp.to('cuda')
 
 def read_ocr_lines(file: str) -> list[str]:
     with open(file, 'r', encoding='utf-8') as infile:

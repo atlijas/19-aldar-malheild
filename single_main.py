@@ -6,6 +6,7 @@ from argparse import ArgumentParser
 from fairseq.models.transformer import TransformerModel
 from utils.utility_functions import correct_ocr_line_by_line, merge_sentences, merge_and_format, read_ocr_lines
 from utils.modernize import modernize_sentence
+from torch import cuda
 
 
 parser = ArgumentParser()
@@ -22,7 +23,8 @@ OCR_POST_PROCESSING_MODEL = TransformerModel.from_pretrained('frsq/models/',
                                             sentencepiece_model='frsq/data/sentencepiece/data/sentencepiece_3000.bpe.model')
 
 
-OCR_POST_PROCESSING_MODEL.cuda(0)
+if cuda.is_available():
+    OCR_POST_PROCESSING_MODEL.cuda(0)
 
 
 read_lines = list(read_ocr_lines(args.file))
