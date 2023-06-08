@@ -6,7 +6,7 @@
 * Sækið ljóslestrarvilluleiðréttingarlíkanið:  
 `curl --remote-name-all https://repository.clarin.is/repository/xmlui/bitstream/handle/20.500.12537/309{/ocr-p-p.zip}`
 
-* Afþjappið:  
+* Afþjappið (eða hvernig sem er en data/- og models/-möppurnar þurfa að vera í möppu sem heitir frsq/):  
 `unzip ocr-p-p.zip "frsq/**/*"`
 
 * Sækið `mideind/IceBERT` í `transformer_models/`:  
@@ -39,7 +39,7 @@ Gögnin í `test_data` eru úr ýmsum tímaritum og dagblöðum sem voru fengin 
 * Download the OCR post-processing model:  
 `curl --remote-name-all https://repository.clarin.is/repository/xmlui/bitstream/handle/20.500.12537/309{/ocr-p-p.zip}`
 
-* Unzip it:  
+* Unzip it (or however you'd like, but the data/ and models/ directories need to be in a directory called frsq/):):  
 `unzip ocr-p-p.zip "frsq/**/*"`
 
 * Download `mideind/IceBERT` to `transformer_models/`:  
