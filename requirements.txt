@@ -1,0 +1,9 @@
+fairseq==0.12.2
+islenska==0.4.5
+numpy==1.22.4
+python_Levenshtein==0.21.0
+tensorflow==2.12.0
+tensorflow_gpu==2.9.1
+tokenizer==3.4.2
+transformers==4.29.2
+wtpsplit==1.0.1
