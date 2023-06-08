@@ -1,0 +1,4 @@
+__pycache__/
+frsq/
+all_txt/*/
+transformer_models/
