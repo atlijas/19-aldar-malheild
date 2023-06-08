@@ -29,6 +29,9 @@ Kvistur (`utils/kvistur/`) er hugbúnaður [Jóns Friðriks Daðasonar](https://
 
 Gögnin úr BÍN (`utils/data/bin_tree.pickle`) eru [Sigrúnarsnið](https://bin.arnastofnun.is/gogn/SH-snid) og er dreift með [CC BY-SA 4.0-leyfi](https://creativecommons.org/licenses/by-sa/4.0/).
 
+Gögnin í `eval_data` eru úr [fyrsta tölublaði Gefnar frá 1870](https://timarit.is/page/2043251#page/n0/mode/2up).
+
+Gögnin í `test_data` eru úr ýmsum tímaritum og dagblöðum sem voru fengin af [timarit.is](https://timarit.is/).
 
 ---
 
@@ -56,3 +59,7 @@ The `main.py` script assumes that in `all_txt/` there are OCRed files and that t
 Kvistur (`utils/kvistur/`) was made by [Jón Friðrik Daðason](https://github.com/jonfd/kvistur) and is distributed with a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
 The BÍN data (`utils/data/bin_tree.pickle`) are [Sigrúnarsnið](https://bin.arnastofnun.is/gogn/SH-snid) and are distributed with a [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
+
+The data in `eval_data` are from [the first volume of Gefn, 1870](https://timarit.is/page/2043251#page/n0/mode/2up).
+
+The data in `test_data` are from various magazines and newspapers, obtained from [timarit.is](https://timarit.is/).
