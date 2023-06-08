@@ -9,6 +9,12 @@
 * Afþjappið:  
 `unzip ocr-p-p.zip "frsq/**/*"`
 
+* Sækið `mideind/IceBERT` í `transformer_models/`:  
+`git clone https://huggingface.co/mideind/IceBERT transformer_models/IceBERT`
+
+* Sækið `mideind/yfirlestur-icelandic-correction-byt5` í `transformer_models/`:  
+`git clone https://huggingface.co/mideind/yfirlestur-icelandic-correction-byt5 transformer_models/yfirlestur-icelandic-correction-byt5`
+
 * Hægt er að nota skriftuna `single_main.py` til þess að leiðrétta ljóslestrarvillur í einni skrá, nútímavæða stafsetningu og sameina í henni línur í málsgreinar:  
 `python3 single_main.py --file test_data/original/short_test.txt`
 
@@ -32,6 +38,12 @@ Gögnin úr BÍN (`utils/data/bin_tree.pickle`) eru [Sigrúnarsnið](https://bin
 
 * Unzip it:  
 `unzip ocr-p-p.zip "frsq/**/*"`
+
+* Download `mideind/IceBERT` to `transformer_models/`:  
+`git clone https://huggingface.co/mideind/IceBERT transformer_models/IceBERT`
+
+* Download `mideind/yfirlestur-icelandic-correction-byt5` to `transformer_models/`:
+`git clone https://huggingface.co/mideind/yfirlestur-icelandic-correction-byt5 transformer_models/yfirlestur-icelandic-correction-byt5`
 
 * You can use `single_main.py` to correct OCR errors in a given file, modernize its spelling and merge its lines into sentences.  
 `python3 single_main.py --file test_data/original/short_test.txt`
